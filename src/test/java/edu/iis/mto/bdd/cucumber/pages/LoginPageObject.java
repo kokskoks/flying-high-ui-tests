@@ -2,6 +2,9 @@ package edu.iis.mto.bdd.cucumber.pages;
 
 import org.openqa.selenium.WebElement;
 
+import net.thucydides.core.annotations.DefaultUrl;
+
+@DefaultUrl("http://localhost:8080/#/welcome")
 public class LoginPageObject {
 	private WebElement email;
 	private WebElement password;
