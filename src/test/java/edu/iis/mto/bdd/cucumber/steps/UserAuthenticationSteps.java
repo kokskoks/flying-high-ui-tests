@@ -26,7 +26,7 @@ public class UserAuthenticationSteps {
     public void givenARegisteredFrequentFlyer(String userEmail) {}
 
     @When("^(.*) authenticates with a valid email address and password$")
-    public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(String user) {
+    public void whenJaneAuthenticatesWithAValidEmailAddressAndPassword(FrequentFlyerMember user) {
     	driver.get("http://localhost:8080/#/welcome");
     	driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
 		driver.findElement(By.name("password")).sendKeys("s3cr3t");
@@ -39,7 +39,7 @@ public class UserAuthenticationSteps {
     }
 
     @Given("^(.*) has logged on$")
-    public void aUserHasLoggedOnAs(String user) {
+    public void aUserHasLoggedOnAs(FrequentFlyerMember user) {
     	driver.get("http://localhost:8080/#/welcome");
     	driver.findElement(By.name("email")).sendKeys("janina.kowalska@acme.com");
 		driver.findElement(By.name("password")).sendKeys("s3cr3t");
