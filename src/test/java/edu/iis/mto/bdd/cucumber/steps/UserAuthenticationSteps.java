@@ -34,8 +34,8 @@ public class UserAuthenticationSteps {
     }
 
     @Then("^(.*) should be given access to (?:her|his) account$")
-    public void thenTheUserShouldBeGivenAccessToAccount(String userName) {
-    	assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj Janina"));    	
+    public void thenTheUserShouldBeGivenAccessToAccount(FrequentFlyerMember user) {
+    	assertThat(driver.findElement(By.id("welcome-message")).getText(), equalTo("Witaj " + user.getFirstName()));    	
     }
 
     @Given("^(.*) has logged on$")
